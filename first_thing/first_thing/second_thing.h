@@ -3,10 +3,14 @@
 #include <GL/gl.h>  
 #include <GL/glu.h>  
 
-void presentationWall();
+void presentationWall(GLuint texture);
 
 void roomDoor();
 void roomWall();
-void roomCeiloor();
+void roomFloor();
+void roomCeiling();
 
-void theRoom(bool aDoor, bool bDoor, bool cDoor, bool dDoor, GLuint textureA, GLuint textureB);
+
+void theRoom(int aDoor, int bDoor, int cDoor, int dDoor, GLuint textureA, GLuint textureB);
+
+void presentationRoom(int numberOfRooms, GLuint textureA, GLuint textureB);

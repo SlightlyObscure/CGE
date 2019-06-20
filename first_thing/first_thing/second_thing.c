@@ -62,14 +62,8 @@ void roomWall() {
 	glEnd();
 }
 
-void roomCeiloor() {
+void roomCeiling() {
 	glBegin(GL_QUADS);
-	//glColor3f(0, 0, 1);
-	// floor
-	glTexCoord2f(10.0f, 10.0f); glVertex3f(-1.0f, -1.0f, -1.0f);
-	glTexCoord2f(0.0f, 10.0f); glVertex3f(1.0f, -1.0f, -1.0f);
-	glTexCoord2f(0.0f, 0.0f); glVertex3f(1.0f, -1.0f, 1.0f);
-	glTexCoord2f(10.0f, 0.0f); glVertex3f(-1.0f, -1.0f, 1.0f);
 
 	// ceiling
 	glTexCoord2f(0.0f, 10.0f); glVertex3f(-1.0f, 1.0f, -1.0f);
@@ -77,44 +71,82 @@ void roomCeiloor() {
 	glTexCoord2f(10.0f, 0.0f); glVertex3f(1.0f, 1.0f, 1.0f);
 	glTexCoord2f(10.0f, 10.0f); glVertex3f(1.0f, 1.0f, -1.0f);
 	glEnd();
-	
+}
+void roomFloor(){
+	glBegin(GL_QUADS);
+
+	// floor
+	glTexCoord2f(10.0f, 10.0f); glVertex3f(-1.0f, -1.0f, -1.0f);
+	glTexCoord2f(0.0f, 10.0f); glVertex3f(1.0f, -1.0f, -1.0f);
+	glTexCoord2f(0.0f, 0.0f); glVertex3f(1.0f, -1.0f, 1.0f);
+	glTexCoord2f(10.0f, 0.0f); glVertex3f(-1.0f, -1.0f, 1.0f);
+	glEnd();
 }
 
-void theRoom(bool aDoor, bool bDoor, bool cDoor, bool dDoor, GLuint textureA, GLuint textureB) {	//door = 1; wall = 0; Türenposition(rechts, hinten, links vorne)
+//nothing=0; door = 1; wall = 2; Wandpositionen(rechts, vorne, links, hinten)
+void theRoom(int aDoor, int bDoor, int cDoor, int dDoor, GLuint textureA, GLuint textureB) {	
 	glEnable(GL_TEXTURE_2D);
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glBindTexture(GL_TEXTURE_2D, textureA);
 
-	roomCeiloor();
+	roomFloor();
 	glDisable(GL_TEXTURE_2D);
 
 	glEnable(GL_TEXTURE_2D);
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glBindTexture(GL_TEXTURE_2D, textureB);
+	roomCeiling();
 
 	if (aDoor == 1) {
 		roomDoor();
 	} 
-	else { 
+	else if(aDoor == 2){
 		roomWall(); 
+	}
+	else {
+		glRotatef(90, 0, 2, 0);
 	}
 	if (bDoor == 1) {
 		roomDoor();
 	}
-	else {
+	else if (bDoor == 2) {
 		roomWall();
+	}
+	else {
+		glRotatef(90, 0, 2, 0);
 	}
 	if (cDoor == 1) {
 		roomDoor();
 	}
-	else {
+	else if (cDoor == 2) {
 		roomWall();
+	}
+	else {
+		glRotatef(90, 0, 2, 0);
 	}
 	if (dDoor == 1) {
 		roomDoor();
 	}
-	else {
+	else if (dDoor == 2) {
 		roomWall();
 	}
+	else {
+		glRotatef(90, 0, 2, 0);
+	}
 	glDisable(GL_TEXTURE_2D);
+}
+
+void presentationRoom(int numberOfRooms, GLuint textureA, GLuint textureB) {
+	
+
+	theRoom(0, 2, 1, 1, textureA, textureB);
+	glTranslatef(2.0f, 0, 0);
+
+	for(int i=1; i<=(numberOfRooms-2); i++){
+		theRoom(0, 2, 0, 2, textureA, textureB);
+		glTranslatef(2.0f, 0, 0);
+	}
+
+	theRoom(1, 2, 0, 2, textureA, textureB);
+
 }

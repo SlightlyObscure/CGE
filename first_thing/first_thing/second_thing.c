@@ -23,12 +23,27 @@ void presentationWall(GLuint texture) {
 	//glTranslatef(0, 1.5, 0); so no translation in for loop? maybe?
 }
 
+void plainWall() {
+
+	glRotatef(90, 0, 2, 0);
+
+	glBegin(GL_QUADS);
+	
+	glColor3f(0, 1, 0);
+	glTexCoord2f(0.0f, 1.0f); glVertex3f(-0.75f, -0.42f, -0.99f);
+	glTexCoord2f(1.0f, 1.0f); glVertex3f(0.75f, -0.42f, -0.99f);
+	glTexCoord2f(1.0f, 0.0f); glVertex3f(0.75f, 0.42f, -0.99f);
+	glTexCoord2f(0.0f, 0.0f); glVertex3f(-0.75f, 0.42f, -0.99f);
+	
+	glEnd();
+	
+}
+
 
 void roomDoor() {
 	glRotatef(90, 0, 2, 0);
 
 	glBegin(GL_QUADS);
-	//glColor3f(1, 1, 1);
 	// left side
 	glTexCoord2f(0.0f, 0.0f); glVertex3f(-1.0f, -1.0f, 1.0f);
 	glTexCoord2f(4.0f, 0.0f); glVertex3f(-0.2f, -1.0f, 1.0f);
@@ -54,7 +69,6 @@ void roomWall() {
 	glRotatef(90, 0, 2, 0);
 
 	glBegin(GL_QUADS);
-	//glColor3f(0, 0, 1);
 	// front face
 	glTexCoord2f(0.0f, 0.0f); glVertex3f(-1.0f, -1.0f, 1.0f);
 	glTexCoord2f(10.0f, 0.0f); glVertex3f(1.0f, -1.0f, 1.0f);
@@ -152,10 +166,10 @@ void presentationRoom(int numberOfRooms, GLuint textureA, GLuint textureB) {
 	glTranslatef(20.0f, 0, 0);	//dont forget the room scaling...
 
 	for(int i=1; i<=(numberOfRooms-2); i++){
-		theRoom(0, 2, 0, 2, textureA, textureB);
+		theRoom(0, 2, 0, 1, textureA, textureB);
 		glTranslatef(20.0f, 0, 0);	//dont forget the room scaling...
 	}
 
-	theRoom(1, 2, 0, 2, textureA, textureB);
+	theRoom(1, 2, 0, 1, textureA, textureB);
 
 }

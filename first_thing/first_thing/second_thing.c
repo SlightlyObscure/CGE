@@ -3,7 +3,6 @@
 #include <GL/glu.h>  
 
 #include <stdio.h>
-#include <stdbool.h>
 
 void presentationWall(GLuint texture) {
 
@@ -13,13 +12,15 @@ void presentationWall(GLuint texture) {
 
 	glBegin(GL_QUADS);
 	// front face glvertex3f( breite, höhe, nähe)
-	glTexCoord2f(0.0f, 1.0f); glVertex3f(-0.75f, -0.42f, -1.0f);
-	glTexCoord2f(1.0f, 1.0f); glVertex3f(0.75f, -0.42f, -1.0f);
-	glTexCoord2f(1.0f, 0.0f); glVertex3f(0.75f, 0.42f, -1.0f);
-	glTexCoord2f(0.0f, 0.0f); glVertex3f(-0.75f, 0.42f, -1.0f);
+	glTexCoord2f(0.0f, 1.0f); glVertex3f(-0.75f, -0.42f, -0.99f);
+	glTexCoord2f(1.0f, 1.0f); glVertex3f(0.75f, -0.42f, -0.99f);
+	glTexCoord2f(1.0f, 0.0f); glVertex3f(0.75f, 0.42f, -0.99f);
+	glTexCoord2f(0.0f, 0.0f); glVertex3f(-0.75f, 0.42f, -0.99f);
 
 	glEnd();
 	glDisable(GL_TEXTURE_2D);
+
+	//glTranslatef(0, 1.5, 0); so no translation in for loop? maybe?
 }
 
 
@@ -85,6 +86,10 @@ void roomFloor(){
 
 //nothing=0; door = 1; wall = 2; Wandpositionen(rechts, vorne, links, hinten)
 void theRoom(int aDoor, int bDoor, int cDoor, int dDoor, GLuint textureA, GLuint textureB) {	
+	
+	glTranslatef(0, 5, 9);
+	glScalef(10.0f, 10.0f, 10.0f);
+	
 	glEnable(GL_TEXTURE_2D);
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 	glBindTexture(GL_TEXTURE_2D, textureA);
@@ -134,17 +139,21 @@ void theRoom(int aDoor, int bDoor, int cDoor, int dDoor, GLuint textureA, GLuint
 		glRotatef(90, 0, 2, 0);
 	}
 	glDisable(GL_TEXTURE_2D);
+
+	glScalef(0.1f, 0.1f, 0.1f);
+	glTranslatef(0, -5, -9);
+	
 }
 
 void presentationRoom(int numberOfRooms, GLuint textureA, GLuint textureB) {
 	
 
 	theRoom(0, 2, 1, 1, textureA, textureB);
-	glTranslatef(2.0f, 0, 0);
+	glTranslatef(20.0f, 0, 0);	//dont forget the room scaling...
 
 	for(int i=1; i<=(numberOfRooms-2); i++){
 		theRoom(0, 2, 0, 2, textureA, textureB);
-		glTranslatef(2.0f, 0, 0);
+		glTranslatef(20.0f, 0, 0);	//dont forget the room scaling...
 	}
 
 	theRoom(1, 2, 0, 2, textureA, textureB);

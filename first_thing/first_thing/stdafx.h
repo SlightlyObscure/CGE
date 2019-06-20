@@ -1,3 +1,4 @@
+#pragma once
 #include <stdlib.h> // for exit
 
 #include <GL/glut.h> 

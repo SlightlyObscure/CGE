@@ -27,6 +27,9 @@
     <ClInclude Include="second_thing.h">
       <Filter>Quelldateien</Filter>
     </ClInclude>
+    <ClInclude Include="art.h">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -39,6 +42,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="second_thing.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="art.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

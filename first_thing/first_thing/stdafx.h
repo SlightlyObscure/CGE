@@ -8,7 +8,7 @@
 
 // IO
 #include <stdio.h>
-#include "tga.cpp"
+#include "tga.h"
 
 // standard functions
 #include <math.h>

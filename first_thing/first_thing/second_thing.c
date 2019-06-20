@@ -1,10 +1,11 @@
-#include <GL/glut.h> 
-#include <GL/gl.h>  
-#include <GL/glu.h>  
-
 #include <stdio.h>
+#include "stdafx.h"
+
 
 void presentationWall(GLuint texture) {
+	
+	glTranslatef(0, 0, 5);
+	glScalef(5.0f, 5.0f, 5.0f);
 
 	glEnable(GL_TEXTURE_2D);
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
@@ -20,23 +21,23 @@ void presentationWall(GLuint texture) {
 	glEnd();
 	glDisable(GL_TEXTURE_2D);
 
-	//glTranslatef(0, 1.5, 0); so no translation in for loop? maybe?
+	glTranslatef(1.5, 0, 0); //so no translation in for loop is needed? maybe?
+	glScalef(0.2f, 0.2f, 0.2f);
+	glTranslatef(0, 0, -5);
 }
 
-void plainWall() {
-
-	glRotatef(90, 0, 2, 0);
+void plainWall(int a, int b, int c) {	//ich wäre farbig wenn etwas von meister talents tentakeln auf mich abfroht
 
 	glBegin(GL_QUADS);
 	
-	glColor3f(0, 1, 0);
+	glColor3f(a, b, c);
 	glTexCoord2f(0.0f, 1.0f); glVertex3f(-0.75f, -0.42f, -0.99f);
 	glTexCoord2f(1.0f, 1.0f); glVertex3f(0.75f, -0.42f, -0.99f);
 	glTexCoord2f(1.0f, 0.0f); glVertex3f(0.75f, 0.42f, -0.99f);
 	glTexCoord2f(0.0f, 0.0f); glVertex3f(-0.75f, 0.42f, -0.99f);
 	
 	glEnd();
-	
+
 }
 
 
@@ -98,7 +99,7 @@ void roomFloor(){
 	glEnd();
 }
 
-//nothing=0; door = 1; wall = 2; Wandpositionen(rechts, vorne, links, hinten)
+//nothing=0; door = 1; wall = 2; Wandreihenfolge(rechts, vorne, links, hinten)
 void theRoom(int aDoor, int bDoor, int cDoor, int dDoor, GLuint textureA, GLuint textureB) {	
 	
 	glTranslatef(0, 5, 9);

@@ -5,13 +5,29 @@ float hour = 0.0;
 float day = 0.0;
 float inc = 20.00;
 
+/**
+* checks if the player is in the according room
+*/
 bool checkIfInRedrawGlitchRoom(int x, int y) {
+	/* For testing room space
+	glBegin(GL_QUADS);
+	glColor3f(0, 1, 0);
+	glVertex3f(-10, 1.0, 39);
+	glVertex3f(10, 1.0, 39);
+	glVertex3f(10, 1.0, 19);
+	glVertex3f(-10, 1.0, 19);
+	glEnd();
+	*/
+
 	if (-10 < x && x < 10 && -39 < y && y < -19) {
 		return true;
 	}
 	return false;
 }
 
+/**
+* draws the solar system
+*/
 void drawRedrawGlitch() {
 
 	hour += inc;

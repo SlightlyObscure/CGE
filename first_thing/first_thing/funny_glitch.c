@@ -1,5 +1,8 @@
 #include "funny_glitch.h"
 
+/**
+* draws the house for a better view of the Glitch
+*/
 void drawFunnyGlitch() {
 
 	glPushMatrix();
@@ -74,7 +77,8 @@ bool checkIfInFunnyGlitchRoom(int x, int y)
 		glEnd();
 	*/
 	
-	printf("x: %d     y: %d\n", x, y);
+	// check for player position
+	//printf("x: %d     y: %d\n", x, y);
 
 	if (-30 < x && x < -10 && -39 < y && y < -19) {
 		return true;

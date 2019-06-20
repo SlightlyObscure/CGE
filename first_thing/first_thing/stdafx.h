@@ -1,13 +1,16 @@
 #pragma once
 #include <stdlib.h> // for exit
 
+// opengl & glut stuff
 #include <GL/glut.h> 
 #include <GL/gl.h>  
 #include <GL/glu.h>  
 
+// IO
 #include <stdio.h>
-#include "tga.h"
+#include "tga.cpp"
 
+// standard functions
 #include <math.h>
 #include <stdbool.h>
 

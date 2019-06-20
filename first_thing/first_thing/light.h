@@ -4,4 +4,4 @@
 #include <GL/glu.h> 
 #include <stdio.h>
 
-void illuminate();
+void illuminate();	//draws a solid sphere and shines a glitchy light on it

@@ -30,6 +30,9 @@
     <ClInclude Include="art.h">
       <Filter>Quelldateien</Filter>
     </ClInclude>
+    <ClInclude Include="redraw_glitch.h">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -45,6 +48,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="art.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="redraw_glitch.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

@@ -20,7 +20,7 @@ void drawPainting(GLuint painting) {
 void makeArt(GLuint painting1, GLuint painting2, GLuint painting3) {
 	glPushMatrix();
 
-	glTranslatef(0, -3.0f, 9.99f);
+	glTranslatef(0, 0, 18.99f);
 
 	drawPainting(painting1);
 	glutPostRedisplay();

@@ -160,6 +160,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="art.h" />
+    <ClInclude Include="redraw_glitch.h" />
     <ClInclude Include="second_thing.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -168,6 +169,7 @@
   <ItemGroup>
     <ClCompile Include="art.c" />
     <ClCompile Include="first_thing.c" />
+    <ClCompile Include="redraw_glitch.c" />
     <ClCompile Include="second_thing.c" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

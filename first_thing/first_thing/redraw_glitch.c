@@ -6,7 +6,7 @@ float day = 0.0;
 float inc = 20.00;
 
 bool checkIfInRedrawGlitchRoom(int x, int y) {
-	if (-10 < x && x < 10 && -30 < y && y < -10) {
+	if (-10 < x && x < 10 && -39 < y && y < -19) {
 		return true;
 	}
 	return false;

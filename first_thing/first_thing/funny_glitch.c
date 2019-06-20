@@ -3,38 +3,8 @@
 void drawFunnyGlitch() {
 
 	glPushMatrix();
-	glScalef(5, 5, 5);
-	glTranslatef(-5, 0, 2);
-	// Multi-colored side - FRONT
-	glBegin(GL_POLYGON);
-	glColor3f(0, 0, 1.0);
-	glVertex3f(-0.5, -0.5, -0.5);
-	glVertex3f(-0.5, 0.5, -0.5);
-	glVertex3f(0.5, 0.5, -0.5);
-	glVertex3f(0.5, -0.5, -0.5);
-	// Black side - BACK
-	glBegin(GL_POLYGON);
-	glColor3f(1.0, 1.0, 0.5);
-	glVertex3f(0.5, -0.5, 0.5);
-	glVertex3f(0.5, 0.5, 0.5);
-	glVertex3f(-0.5, 0.5, 0.5);
-	glVertex3f(-0.5, -0.5, 0.5);
-	// Purple side - RIGHT
-	glBegin(GL_POLYGON);
-	glColor3f(1.0, 0.0, 1.0);
-	glVertex3f(0.5, -0.5, -0.5);
-	glVertex3f(0.5, 0.5, -0.5);
-	glVertex3f(0.5, 0.5, 0.5);
-	glVertex3f(0.5, -0.5, 0.5);
-	glEnd();
-	glPopMatrix();
-
-
-	glClear(GL_DEPTH_BUFFER_BIT);
-
-	glTranslatef(0, -2, -8);
-	glDepthMask(GL_FALSE);
-
+	glTranslatef(20, -5.0, 35);
+	glScalef(2, 2, 2);
 	glBegin(GL_QUADS);
 
 	// front 
@@ -88,10 +58,26 @@ void drawFunnyGlitch() {
 	glVertex3f(0, 4, 0);
 	glVertex3f(-1, 2, -1);
 	glEnd();
+	glPopMatrix();
 }
 
 
 bool checkIfInFunnyGlitchRoom(int x, int y) 
 {
+	/* check for room space
+		glBegin(GL_QUADS);
+		glColor3f(0, 1, 0);
+		glVertex3f(30, 1.0, 39);
+		glVertex3f(10, 1.0, 39);
+		glVertex3f(10, 1.0, 19);
+		glVertex3f(30, 1.0, 19);
+		glEnd();
+	*/
+	
+	printf("x: %d     y: %d\n", x, y);
+
+	if (-30 < x && x < -10 && -39 < y && y < -19) {
+		return true;
+	}
 	return false;
 }

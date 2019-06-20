@@ -5,7 +5,7 @@
 #include <GL/glu.h>  
 
 #include <stdio.h>
-#include "tga.cpp"
+#include "tga.h"
 
 #include <math.h>
 #include <stdbool.h>

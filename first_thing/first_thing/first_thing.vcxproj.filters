@@ -24,6 +24,9 @@
     <ClInclude Include="tga.h">
       <Filter>Quelldateien</Filter>
     </ClInclude>
+    <ClInclude Include="second_thing.h">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -33,6 +36,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="first_thing.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="second_thing.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

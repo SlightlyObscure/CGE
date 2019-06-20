@@ -33,6 +33,12 @@
     <ClInclude Include="redraw_glitch.h">
       <Filter>Quelldateien</Filter>
     </ClInclude>
+    <ClInclude Include="funny_glitch.h">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
+    <ClInclude Include="light.h">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -51,6 +57,12 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="redraw_glitch.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="funny_glitch.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="light.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

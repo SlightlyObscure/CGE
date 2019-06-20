@@ -160,6 +160,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="art.h" />
+    <ClInclude Include="funny_glitch.h" />
+    <ClInclude Include="light.h" />
     <ClInclude Include="redraw_glitch.h" />
     <ClInclude Include="second_thing.h" />
     <ClInclude Include="stdafx.h" />
@@ -169,6 +171,8 @@
   <ItemGroup>
     <ClCompile Include="art.c" />
     <ClCompile Include="first_thing.c" />
+    <ClCompile Include="funny_glitch.c" />
+    <ClCompile Include="light.c" />
     <ClCompile Include="redraw_glitch.c" />
     <ClCompile Include="second_thing.c" />
     <ClCompile Include="stdafx.cpp">

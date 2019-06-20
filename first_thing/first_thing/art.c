@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "art.h"
 
 void drawPainting(GLuint painting, float move) {
 	glEnable(GL_TEXTURE_2D);
@@ -23,9 +23,7 @@ void makeArt(GLuint painting1, GLuint painting2, GLuint painting3) {
 	glTranslatef(0, 0, 18.99f);
 
 	drawPainting(painting1, 0.00f);
-	glutPostRedisplay();
 	drawPainting(painting2, 0.01f);
-	glutPostRedisplay();
 	drawPainting(painting3, -0.01f);
 
 	glPopMatrix();

@@ -162,15 +162,14 @@ void theRoom(int aDoor, int bDoor, int cDoor, int dDoor, GLuint textureA, GLuint
 
 void presentationRoom(int numberOfRooms, GLuint textureA, GLuint textureB) {
 	
-
-	theRoom(0, 2, 1, 1, textureA, textureB);
+	theRoom(0, 2, 2, 2, textureA, textureB);
 	glTranslatef(20.0f, 0, 0);	//dont forget the room scaling...
 
 	for(int i=1; i<=(numberOfRooms-2); i++){
-		theRoom(0, 2, 0, 1, textureA, textureB);
+		theRoom(0, 2, 0, 2, textureA, textureB);
 		glTranslatef(20.0f, 0, 0);	//dont forget the room scaling...
 	}
 
-	theRoom(1, 2, 0, 1, textureA, textureB);
+	theRoom(1, 2, 0, 2, textureA, textureB);
 
 }

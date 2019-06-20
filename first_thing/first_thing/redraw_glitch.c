@@ -19,7 +19,7 @@ bool checkIfInRedrawGlitchRoom(int x, int y) {
 	glEnd();
 	*/
 
-	if (-10 < x && x < 10 && -39 < y && y < -19) {
+	if (-30 < x && x < -10 && -39 < y && y < -19) {
 		return true;
 	}
 	return false;

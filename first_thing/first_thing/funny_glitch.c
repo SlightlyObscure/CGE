@@ -6,7 +6,7 @@
 void drawFunnyGlitch() {
 
 	glPushMatrix();
-	glTranslatef(20, -5.0, 35);
+	glTranslatef(20, -5.0, 55);
 	glScalef(2, 2, 2);
 	glBegin(GL_QUADS);
 
@@ -80,7 +80,7 @@ bool checkIfInFunnyGlitchRoom(int x, int y)
 	// check for player position
 	//printf("x: %d     y: %d\n", x, y);
 
-	if (-30 < x && x < -10 && -39 < y && y < -19) {
+	if (-30 < x && x < -10 && -59 < y && y < -39) {
 		return true;
 	}
 	return false;

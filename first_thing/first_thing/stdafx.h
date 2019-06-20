@@ -19,7 +19,7 @@
 
 #define SQRT2 1.41421356
 
-#define SLIDE_SIZE 1.5f*9.99f
+#define SLIDE_SIZE 1.5f*5.0f
 
 #define RAD(x) (((x)*M_PI)/180.)
 

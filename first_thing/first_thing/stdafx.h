@@ -1,10 +1,18 @@
 #pragma once
 #include <stdlib.h> // for exit
 
+//glew
+#include <GL/glew.h>
+//#include <GL/eglew.h>
+//#include <GL/glxew.h>
+//#include <GL/wglew.h>
+
 // opengl & glut stuff
 #include <GL/glut.h> 
 #include <GL/gl.h>  
 #include <GL/glu.h>  
+
+
 
 // IO
 #include <stdio.h>

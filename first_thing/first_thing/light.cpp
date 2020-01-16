@@ -1,4 +1,4 @@
-#include "light.h"
+#include "light.hpp"
 
 void illuminate() {
 	glTranslatef(0, 0, 10.0f);	//move sphere into the middle of the room

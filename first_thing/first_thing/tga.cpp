@@ -28,7 +28,7 @@
 #endif
 
 
-#include "tga.h"
+#include "tga.hpp"
 
 // this variable is used for image series
 static int savedImages = 0;

@@ -1,4 +1,4 @@
-#include "art.h"
+#include "art.hpp"
 
 void drawPainting(GLuint painting, float move) {
 	//enable 2D texture stuff

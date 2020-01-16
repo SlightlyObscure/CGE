@@ -1,4 +1,4 @@
-#include "funny_glitch.h"
+#include "funny_glitch.hpp"
 
 /**
 * draws the house for a better view of the Glitch

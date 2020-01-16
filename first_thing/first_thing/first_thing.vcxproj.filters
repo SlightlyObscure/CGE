@@ -15,54 +15,60 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="targetver.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="art.hpp">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
+    <ClInclude Include="funny_glitch.hpp">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
+    <ClInclude Include="light.hpp">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
+    <ClInclude Include="redraw_glitch.hpp">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
+    <ClInclude Include="second_thing.hpp">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
+    <ClInclude Include="tga.hpp">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
+    <ClInclude Include="transparent.hpp">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="tga.h">
-      <Filter>Quelldateien</Filter>
-    </ClInclude>
-    <ClInclude Include="second_thing.h">
-      <Filter>Quelldateien</Filter>
-    </ClInclude>
-    <ClInclude Include="art.h">
-      <Filter>Quelldateien</Filter>
-    </ClInclude>
-    <ClInclude Include="redraw_glitch.h">
-      <Filter>Quelldateien</Filter>
-    </ClInclude>
-    <ClInclude Include="funny_glitch.h">
-      <Filter>Quelldateien</Filter>
-    </ClInclude>
-    <ClInclude Include="light.h">
-      <Filter>Quelldateien</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="art.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="tga.c">
+    <ClCompile Include="first_thing.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="first_thing.c">
+    <ClCompile Include="funny_glitch.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="second_thing.c">
+    <ClCompile Include="light.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="art.c">
+    <ClCompile Include="redraw_glitch.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="redraw_glitch.c">
+    <ClCompile Include="second_thing.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="funny_glitch.c">
+    <ClCompile Include="tga.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="light.c">
+    <ClCompile Include="transparent.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

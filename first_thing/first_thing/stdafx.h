@@ -16,7 +16,7 @@
 
 // IO
 #include <stdio.h>
-#include "tga.h"
+#include "tga.hpp"
 
 // standard functions
 #include <math.h>

@@ -1,1 +1,1 @@
-repository at https://github.com/SlightlyObscure/CGE
+see repository at https://github.com/SlightlyObscure/CGE for commit history
